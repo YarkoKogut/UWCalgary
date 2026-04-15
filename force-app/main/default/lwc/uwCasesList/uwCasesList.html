@@ -1,0 +1,38 @@
+<template>
+    <div class="cases-wrapper">
+        <h2 class="section-title">My Requests</h2>
+
+        <template if:true={hasCases}>
+            <table class="cases-table">
+                <thead>
+                    <tr>
+                        <th>Case #</th>
+                        <th>Type</th>
+                        <th>Subject</th>
+                        <th>Status</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template for:each={cases} for:item="c">
+                        <tr key={c.CaseNumber}>
+                            <td>{c.CaseNumber}</td>
+                            <td>{c.Assistance_Type__c}</td>
+                            <td>{c.Subject}</td>
+                            <td><span class={c.statusClass}>{c.Status}</span></td>
+                            <td>{c.formattedDate}</td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+        </template>
+
+        <template if:false={hasCases}>
+            <p class="empty-msg">You have no requests yet.</p>
+        </template>
+
+        <template if:true={error}>
+            <p class="error-msg">{error}</p>
+        </template>
+    </div>
+</template>

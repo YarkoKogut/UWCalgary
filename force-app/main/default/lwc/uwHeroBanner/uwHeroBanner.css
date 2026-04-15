@@ -1,0 +1,276 @@
+/* ── Hero ── */
+.hero-wrapper {
+    position: relative;
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #003DA5 0%, #0057B8 60%, #1a73c4 100%);
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(150,10,20,0.88) 0%, rgba(150,10,20,0.45) 100%);
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.hero-content {
+    max-width: 620px;
+    color: #fff;
+}
+
+.hero-tagline {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 14px;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0 0 20px;
+    color: #fff;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 36px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* ── Buttons ── */
+.btn {
+    display: inline-block;
+    padding: 14px 32px;
+    border-radius: 2px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    transition: all 0.2s;
+}
+
+.btn-primary {
+    background: #fff;
+    color: #C8102E !important;
+    border: 2px solid #fff;
+    text-decoration: none !important;
+}
+
+.btn-primary:hover {
+    background: #f0f0f0;
+    border-color: #f0f0f0;
+    color: #C8102E !important;
+    text-decoration: none !important;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #fff !important;
+    border: 2px solid rgba(255,255,255,0.7);
+    text-decoration: none !important;
+}
+
+.btn-secondary:hover {
+    border-color: #fff;
+    background: rgba(255,255,255,0.1);
+    color: #fff !important;
+    text-decoration: none !important;
+}
+
+.btn-large {
+    padding: 18px 48px;
+    font-size: 1rem;
+}
+
+.btn-donate {
+    background: #fff;
+    color: #C8102E !important;
+    border: 2px solid #fff;
+    display: inline-block;
+    padding: 14px 32px;
+    border-radius: 2px;
+    font-size: 0.95rem;
+    font-weight: 800;
+    text-decoration: none !important;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    transition: all 0.2s;
+}
+
+.btn-donate:hover {
+    background: #C8102E;
+    color: #fff !important;
+    border-color: #fff;
+    text-decoration: none !important;
+}
+
+/* ── Impact Bar ── */
+.impact-bar {
+    background: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 28px 40px;
+    gap: 0;
+    flex-wrap: wrap;
+}
+
+.impact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 48px;
+}
+
+.impact-number {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #C8102E;
+    line-height: 1;
+}
+
+.impact-label {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.65);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 6px;
+}
+
+.impact-divider {
+    width: 1px;
+    height: 48px;
+    background: rgba(255,255,255,0.15);
+}
+
+/* ── Services ── */
+.services-section {
+    padding: 80px 5%;
+    text-align: center;
+    background: #fff;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+}
+
+.section-subtitle {
+    font-size: 1.05rem;
+    color: #666;
+    margin-bottom: 52px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2px;
+    max-width: 960px;
+    margin: 0 auto;
+    background: #eee;
+}
+
+.service-card {
+    background: #fff;
+    padding: 40px 28px;
+    transition: background 0.2s;
+    text-align: left;
+}
+
+.service-card:hover {
+    background: #fafafa;
+}
+
+.service-icon {
+    font-size: 2rem;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.service-card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #C8102E;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.service-card p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* ── CTA Section ── */
+.cta-section {
+    background: #f4f4f4;
+    text-align: center;
+    padding: 72px 5%;
+    border-top: 4px solid #C8102E;
+}
+
+.cta-section h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+}
+
+.cta-section p {
+    font-size: 1.05rem;
+    color: #555;
+    margin-bottom: 36px;
+}
+
+.cta-section .btn-primary {
+    background: #C8102E;
+    color: #fff;
+    border-color: #C8102E;
+}
+
+.cta-section .btn-primary:hover {
+    background: #a50d25;
+    border-color: #a50d25;
+    color: #fff;
+}
+
+.cta-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-section .btn-secondary {
+    background: transparent;
+    color: #C8102E;
+    border: 2px solid #C8102E;
+}
+
+.cta-section .btn-secondary:hover {
+    background: #C8102E;
+    color: #fff;
+    text-decoration: none;
+}

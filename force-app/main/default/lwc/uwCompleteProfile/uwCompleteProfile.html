@@ -1,0 +1,41 @@
+<template>
+    <div class="profile-container">
+        <h2>Complete Your Profile</h2>
+        <template if:true={error}>
+            <p class="error-msg">{error}</p>
+        </template>
+        <template if:true={contact}>
+            <div class="form-group">
+                <lightning-input
+                    label="Phone"
+                    type="tel"
+                    value={phone}
+                    onchange={handlePhone}>
+                </lightning-input>
+                <lightning-input
+                    label="Household Size"
+                    type="number"
+                    value={householdSize}
+                    onchange={handleHouseholdSize}>
+                </lightning-input>
+                <lightning-input
+                    label="Annual Income"
+                    type="number"
+                    formatter="currency"
+                    value={annualIncome}
+                    onchange={handleAnnualIncome}>
+                </lightning-input>
+            </div>
+            <div class="form-actions">
+                <lightning-button
+                    variant="brand"
+                    label="Save & Continue"
+                    onclick={handleSave}>
+                </lightning-button>
+            </div>
+        </template>
+        <template if:true={isLoading}>
+            <p>Loading...</p>
+        </template>
+    </div>
+</template>

@@ -1,0 +1,70 @@
+<template>
+    <div class="hero-wrapper">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <div class="hero-tagline">{tagline}</div>
+                <h1 class="hero-title">{title}</h1>
+                <p class="hero-subtitle">{subtitle}</p>
+                <div class="hero-actions">
+                    <template if:true={showDashboard}>
+                        <a href={dashboardUrl} class="btn btn-primary">My Dashboard</a>
+                    </template>
+                    <template if:false={showDashboard}>
+                        <a href={registerUrl} class="btn btn-primary">Register</a>
+                        <a href="/portal/login" class="btn btn-secondary">Sign In</a>
+                    </template>
+                    <a href="/portal/donate" class="btn btn-donate">Donate</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="impact-bar">
+        <div class="impact-item">
+            <span class="impact-number">3,200+</span>
+            <span class="impact-label">Families Served</span>
+        </div>
+        <div class="impact-divider"></div>
+        <div class="impact-item">
+            <span class="impact-number">4</span>
+            <span class="impact-label">Support Programs</span>
+        </div>
+        <div class="impact-divider"></div>
+        <div class="impact-item">
+            <span class="impact-number">12</span>
+            <span class="impact-label">Partner Agencies</span>
+        </div>
+        <div class="impact-divider"></div>
+        <div class="impact-item">
+            <span class="impact-number">24/7</span>
+            <span class="impact-label">Online Access</span>
+        </div>
+    </div>
+
+    <div class="services-section">
+        <h2 class="section-title">How We Can Help</h2>
+        <p class="section-subtitle">United Way connects you with the support you need</p>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🍎</div>
+                <h3>Food Assistance</h3>
+                <p>Access to food banks, meal programs, and grocery support for families in need.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🏠</div>
+                <h3>Housing Support</h3>
+                <p>Emergency shelter, rent assistance, and stable housing solutions.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🚌</div>
+                <h3>Transportation</h3>
+                <p>Bus passes, ride assistance, and transportation to medical appointments.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🧠</div>
+                <h3>Mental Health</h3>
+                <p>Counseling, crisis support, and mental wellness programs.</p>
+            </div>
+        </div>
+    </div>
+</template>

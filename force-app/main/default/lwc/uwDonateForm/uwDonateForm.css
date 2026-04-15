@@ -1,0 +1,477 @@
+/* ── Wrapper ── */
+.donate-wrapper {
+    min-height: 100vh;
+    background: #f7f7f7;
+    font-family: 'Salesforce Sans', sans-serif;
+}
+
+/* ── Header ── */
+.donate-header {
+    background: #C8102E;
+    padding: 16px 40px;
+    display: flex;
+    align-items: center;
+}
+
+.brand-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none !important;
+    color: #fff !important;
+}
+
+.brand-name {
+    font-size: 1.1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #fff !important;
+}
+
+.brand-divider {
+    opacity: 0.4;
+    color: #fff !important;
+}
+
+.brand-portal {
+    font-size: 0.85rem;
+    opacity: 0.85;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #fff !important;
+}
+
+/* ── Progress bar ── */
+.progress-track {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 40px 0;
+    gap: 0;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 24px;
+}
+
+.progress-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    min-width: 140px;
+}
+
+.step-circle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #ddd;
+    color: #999;
+    font-size: 0.9rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.progress-step.active .step-circle {
+    background: #C8102E;
+    color: #fff;
+}
+
+.progress-step.done .step-circle {
+    background: #C8102E;
+    color: #fff;
+}
+
+.step-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #aaa;
+}
+
+.progress-step.active .step-label {
+    color: #C8102E;
+}
+
+.progress-step.done .step-label {
+    color: #888;
+}
+
+.progress-line {
+    flex: 1;
+    height: 3px;
+    background: #ddd;
+    max-width: 120px;
+    margin-bottom: 22px;
+    transition: background 0.3s;
+}
+
+.progress-line.filled {
+    background: #C8102E;
+}
+
+/* ── Form body ── */
+.form-body {
+    display: flex;
+    gap: 32px;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 40px;
+    align-items: flex-start;
+}
+
+.form-main {
+    flex: 1;
+    background: #fff;
+    border-radius: 4px;
+    padding: 40px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.form-main h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-bottom: 6px;
+}
+
+.step-sub {
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 28px;
+}
+
+/* ── Frequency tabs ── */
+.frequency-tabs {
+    display: flex;
+    margin-bottom: 24px;
+    border: 2px solid #C8102E;
+    border-radius: 2px;
+    overflow: hidden;
+    width: fit-content;
+}
+
+.freq-tab {
+    padding: 10px 28px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    border: none;
+    background: #fff;
+    color: #C8102E;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.freq-tab.selected {
+    background: #C8102E;
+    color: #fff;
+}
+
+/* ── Amount grid ── */
+.amount-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.amount-btn {
+    padding: 18px 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: 2px solid #ddd;
+    border-radius: 2px;
+    background: #fff;
+    color: #1a1a1a;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.amount-btn:hover {
+    border-color: #C8102E;
+    color: #C8102E;
+}
+
+.amount-btn.selected {
+    background: #C8102E;
+    border-color: #C8102E;
+    color: #fff;
+}
+
+/* ── Input with prefix ── */
+.input-with-prefix {
+    display: flex;
+    align-items: center;
+    border: 1.5px solid #ddd;
+    border-radius: 2px;
+    overflow: hidden;
+    transition: border-color 0.2s;
+}
+
+.input-with-prefix:focus-within {
+    border-color: #C8102E;
+}
+
+.prefix {
+    padding: 12px 14px;
+    background: #f4f4f4;
+    color: #555;
+    font-weight: 700;
+    border-right: 1px solid #ddd;
+}
+
+.input-with-prefix input {
+    border: none;
+    outline: none;
+    padding: 12px 14px;
+    font-size: 0.95rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ── Form groups ── */
+.form-group {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #444;
+}
+
+.form-group input,
+.form-group select {
+    border: 1.5px solid #ddd;
+    border-radius: 2px;
+    padding: 12px 14px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+    box-sizing: border-box;
+    color: #1a1a1a;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #C8102E;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+/* ── Buttons ── */
+.btn-action {
+    background: #C8102E;
+    color: #fff;
+    border: none;
+    padding: 14px 32px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background 0.2s;
+    text-decoration: none !important;
+    display: inline-block;
+    margin-top: 8px;
+}
+
+.btn-action:hover { background: #a50d25; color: #fff !important; }
+
+.btn-pay {
+    background: #1a1a1a;
+    color: #fff;
+    border: none;
+    padding: 14px 32px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-pay:hover { background: #333; }
+.btn-pay:disabled { background: #ccc; cursor: not-allowed; }
+
+.btn-back {
+    background: transparent;
+    color: #555;
+    border: 1.5px solid #ddd;
+    padding: 14px 24px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-back:hover { border-color: #999; color: #1a1a1a; }
+
+.btn-row {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+/* ── Review card ── */
+.review-card {
+    background: #f9f9f9;
+    border: 1px solid #eee;
+    border-left: 4px solid #C8102E;
+    border-radius: 2px;
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.review-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.review-row:last-child { border-bottom: none; }
+
+.review-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #888;
+    font-weight: 600;
+}
+
+.review-value {
+    font-size: 0.95rem;
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+.review-amount {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #C8102E;
+}
+
+/* ── Sidebar ── */
+.form-sidebar {
+    width: 280px;
+    flex-shrink: 0;
+}
+
+.sidebar-card {
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    padding: 32px 24px;
+    border-top: 4px solid #C8102E;
+}
+
+.sidebar-title {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #888;
+    margin-bottom: 12px;
+}
+
+.sidebar-amount {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: #C8102E;
+    line-height: 1;
+    margin-bottom: 6px;
+}
+
+.sidebar-freq {
+    font-size: 0.88rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 20px;
+}
+
+.sidebar-divider {
+    height: 1px;
+    background: #eee;
+    margin-bottom: 20px;
+}
+
+.sidebar-msg {
+    font-size: 0.88rem;
+    color: #555;
+    line-height: 1.65;
+    margin-bottom: 12px;
+}
+
+/* ── Field error ── */
+.field-error {
+    color: #C8102E;
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+/* ── Success screen ── */
+.success-screen {
+    max-width: 520px;
+    margin: 80px auto;
+    text-align: center;
+    background: #fff;
+    border-radius: 4px;
+    padding: 60px 48px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.success-icon {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: #C8102E;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+}
+
+.success-screen h2 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.success-screen p {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}

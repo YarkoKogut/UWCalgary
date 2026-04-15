@@ -1,0 +1,25 @@
+<template>
+    <div class="submit-wrapper">
+        <template if:true={toastVisible}>
+            <div class="toast toast-success">
+                <span class="toast-icon">&#10003;</span>
+                Your request has been submitted! Our team will contact you soon.
+            </div>
+        </template>
+
+        <template if:false={showFlow}>
+            <button class="btn-submit" onclick={handleShowFlow}>
+                + Submit New Request
+            </button>
+        </template>
+
+        <template if:true={showFlow}>
+            <div class="flow-wrapper">
+                <lightning-flow
+                    flow-api-name="Submit_Assistance_Request"
+                    onstatuschange={handleStatusChange}>
+                </lightning-flow>
+            </div>
+        </template>
+    </div>
+</template>

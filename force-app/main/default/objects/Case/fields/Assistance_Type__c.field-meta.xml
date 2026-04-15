@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Assistance_Type__c</fullName>
+    <label>Assistance Type</label>
+    <description>Type of assistance being requested</description>
+    <type>Picklist</type>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Food Assistance</fullName>
+                <default>false</default>
+                <label>Food Assistance</label>
+            </value>
+            <value>
+                <fullName>Housing Support</fullName>
+                <default>false</default>
+                <label>Housing Support</label>
+            </value>
+            <value>
+                <fullName>Transportation</fullName>
+                <default>false</default>
+                <label>Transportation</label>
+            </value>
+            <value>
+                <fullName>Mental Health Support</fullName>
+                <default>false</default>
+                <label>Mental Health Support</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
